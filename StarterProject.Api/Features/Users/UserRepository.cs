@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using StarterProject.Api.Common;
 using StarterProject.Api.Data;
 using StarterProject.Api.Features.Users.Dtos;
 using StarterProject.Api.Security;
@@ -67,6 +68,7 @@ namespace StarterProject.Api.Features.Users
                 LastName = userCreateDto.LastName,
                 Username = userCreateDto.Username,
                 Email = userCreateDto.Email,
+                Role = Constants.Users.Roles.User,
                 PasswordSalt = passwordHash.Salt,
                 PasswordHash = passwordHash.Hash
             };

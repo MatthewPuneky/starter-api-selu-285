@@ -36,6 +36,7 @@ namespace StarterProject.Api
                 {
                     options.Filters.Add(new ModelStateFilter());
                 })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddFluentValidation(options =>
                 {
                     options.RegisterValidatorsFromAssemblyContaining<Startup>();
